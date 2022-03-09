@@ -29,4 +29,10 @@ server.get('TestRemoteInclude', function(req, res, next) {
     return next();
 });
 
+server.get('TestDecorator', function(req, res, next) {
+    res.render('practice/testdecorator');
+
+    return next();
+});
+
 module.exports = server.exports();
