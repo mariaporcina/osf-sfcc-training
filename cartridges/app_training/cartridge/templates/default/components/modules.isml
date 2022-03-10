@@ -1,0 +1,4 @@
+<ismodule template="components/content/mycustomtag"
+    name="mycustomtag"
+    attribute="pid"
+/>

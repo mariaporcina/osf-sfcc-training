@@ -1,3 +1,6 @@
 <isdecorate template="common/layout/page">
-    <p>lorem ipsun</p>
+
+    <isset name="myText" value="just my content" scope="page" />
+
+    <ismycustomtag pid="${ myText }" />
 </isdecorate>
