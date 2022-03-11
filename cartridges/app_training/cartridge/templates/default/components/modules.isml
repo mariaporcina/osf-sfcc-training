@@ -1,4 +1,9 @@
-<ismodule template="components/content/mycustomtag"
-    name="mycustomtag"
-    attribute="pid"
+<ismodule template="/components/content/contentAsset"
+	name="contentasset"
+	attribute="aid"
+/>
+
+<ismodule template="/components/content/customContent"
+	name="customcontent"
+	attribute="aid"
 />

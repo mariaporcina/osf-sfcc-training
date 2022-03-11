@@ -6,6 +6,8 @@
         assets.addCss('/css/product/detail.css');
     </isscript>
 
+${Resource.msg('text.test.myothernewresource', 'product', null)}
+
     <isset name="product" value="${pdict.product}" scope="page" />
     <isset name="isQuickView" value="${false}" scope="page" />
     <isset name="isProductSet" value="${pdict.product.productType === 'set'}" scope="page" />
