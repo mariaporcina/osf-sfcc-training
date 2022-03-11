@@ -64,6 +64,11 @@
                             </isif>
                         </isif>
                     </isloop>
+
+                    <isif condition="${pdict.notes.length == 0}" >
+                        <h1>${Resource.msg('info.cart.user.nonotes','cart',null)}.</h1>
+                    </isif>
+
                     <isinclude template="cart/cartApproachingDiscount" />
                 </div>
                 <!---totals, and checkout actions--->
