@@ -54,6 +54,19 @@ server.post(
 server.get("MyFirstForm", function(req, res, next) {
     var URLUtils = require("dw/web/URLUtils");
 
+    //These imports are needed for you to uset eh CustomObjectMgr and Transaction classes
+    var CustomObjectMgr = require("dw/object/CustomObjectMgr");
+    var Transaction = require("dw/system/Transaction");
+
+    var id = 'mycustomcodeobject';
+    var object = CustomObjectMgr.getCustomObject('NewsletterSubscription', id);
+
+    if(!object){
+        Transaction.wrap(function() {
+            object = CustomObjectMgr.createCustomObject('NewsletterSubscription', id);
+        });
+    }
+
     var profileForm = server.forms.getForm("trainingForms");
     profileForm.clear();
 
