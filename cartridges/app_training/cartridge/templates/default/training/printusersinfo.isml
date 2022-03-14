@@ -1,0 +1,17 @@
+<isdecorate template="common/layout/page">
+    <h1>
+        <isset name="pageTitle" value="User's personal info" scope="page" />
+        <isprint value="${pageTitle}" encoding="htmlcontent" />
+    </h1>
+
+    <main>
+        <section>
+            <h2>
+                <isprint value="${pdict.profileForm.customer.fullname.label}" encoding="off" />
+            </h2>
+            <p>
+                <isprint value="${pdict.profileForm.customer.email.label}" encoding="off" />
+            </p>
+        </section>
+    </main>
+</isdecorate>

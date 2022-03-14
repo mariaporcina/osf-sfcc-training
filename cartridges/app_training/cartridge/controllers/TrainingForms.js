@@ -4,6 +4,10 @@ var server = require("server");
 var csrfProtection = require("*/cartridge/scripts/middleware/csrf");
 var consentTracking = require("*/cartridge/scripts/middleware/consentTracking");
 
+/*================================================================*/
+/*======== Practical exercise: Analyze and run an example ========*/
+/*================================================================*/
+
 server.get("Show", consentTracking.consent, server.middleware.https, csrfProtection.generateToken, function(
     req,
     res,
@@ -42,5 +46,35 @@ server.post(
         next();
     }
 );
+
+/*================================================================*/
+/*======== Practical exercise: Implement your own version ========*/
+/*================================================================*/
+
+server.get("MyFirstForm", function(req, res, next) {
+    var URLUtils = require("dw/web/URLUtils");
+
+    var profileForm = server.forms.getForm("trainingForms");
+    profileForm.clear();
+
+    res.render('training/trainingforms', {
+        profileForm: profileForm,
+        actionUrl: URLUtils.url("TrainingForms-PrintUser").toString()
+    });
+
+    return next();
+});
+
+server.post('PrintUser', function(req, res, next) {
+    var URLUtils = require("dw/web/URLUtils");
+
+    var profileForm = server.forms.getForm("trainingForms");
+
+    res.render('training/printusersinfo', {
+        profileForm: profileForm,
+    });
+
+    return next();
+});
 
 module.exports = server.exports();
