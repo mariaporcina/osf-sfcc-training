@@ -55,17 +55,17 @@ server.get("MyFirstForm", function(req, res, next) {
     var URLUtils = require("dw/web/URLUtils");
 
     //These imports are needed for you to uset eh CustomObjectMgr and Transaction classes
-    var CustomObjectMgr = require("dw/object/CustomObjectMgr");
-    var Transaction = require("dw/system/Transaction");
+    // var CustomObjectMgr = require("dw/object/CustomObjectMgr");
+    // var Transaction = require("dw/system/Transaction");
 
-    var id = 'mycustomcodeobject';
-    var object = CustomObjectMgr.getCustomObject('NewsletterSubscription', id);
+    // var id = 'mycustomcodeobject';
+    // var object = CustomObjectMgr.getCustomObject('NewsletterSubscription', id);
 
-    if(!object){
-        Transaction.wrap(function() {
-            object = CustomObjectMgr.createCustomObject('NewsletterSubscription', id);
-        });
-    }
+    // if(!object){
+    //     Transaction.wrap(function() {
+    //         object = CustomObjectMgr.createCustomObject('NewsletterSubscription', id);
+    //     });
+    // }
 
     var profileForm = server.forms.getForm("trainingForms");
     profileForm.clear();
@@ -79,9 +79,8 @@ server.get("MyFirstForm", function(req, res, next) {
 });
 
 server.post('PrintUser', function(req, res, next) {
-    var URLUtils = require("dw/web/URLUtils");
-
     var profileForm = server.forms.getForm("trainingForms");
+    // var result = getDetailsObject(profileForm);
 
     res.render('training/printusersinfo', {
         profileForm: profileForm,
