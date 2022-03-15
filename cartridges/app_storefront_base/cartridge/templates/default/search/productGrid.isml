@@ -1,5 +1,5 @@
-<isinclude template="/components/modules" sf-toolkit="off" />
-<iscontentasset aid="student_guide_content_asset_2"/>
+<iscomment> <isinclude template="/components/modules" sf-toolkit="off" />
+<iscontentasset aid="student_guide_content_asset_2"/> </iscomment>
 
 <isinclude template="search/components/productTiles" />
 <div class="col-12 grid-footer"
