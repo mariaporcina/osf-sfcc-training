@@ -34,4 +34,6 @@
     </span>
 </span>
 
-<isdiscountpercentage discountvalue="${pdict.percentageDiscount}" />
+<isif condition="${pdict.percentageDiscount !== 0}">
+    <isdiscountpercentage discountvalue="${pdict.percentageDiscount}" />
+</isif>

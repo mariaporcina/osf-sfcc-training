@@ -8,9 +8,18 @@ server.append('Show', function(req, res, next) {
     var getDiscountPercentage = require('../scripts/product/promotion');
     var viewData = res.getViewData();
 
-    var standardPrice = viewData.product.price.list.decimalPrice;
-    var salePrice = viewData.product.price.sales.decimalPrice;
-    viewData.percentageDiscount = getDiscountPercentage.getDiscountPercentage(standardPrice, salePrice);
+    var price = viewData.product.price;
+    var salePrice = price.sales.decimalPrice;
+
+    if(price.list !== null) {
+
+        var standardPrice = price.list.decimalPrice;
+        var discountPercentage = getDiscountPercentage.getDiscountPercentage(standardPrice, salePrice);
+
+        viewData.percentageDiscount = discountPercentage;
+    } else {
+        viewData.percentageDiscount = 0;
+    }
 
     res.setViewData(viewData);
 

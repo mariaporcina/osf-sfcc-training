@@ -1,5 +1,5 @@
 <isset name="promotionMessage" value="${Resource.msgf("text.promotion.percentage.message", "product", null, pdict.discountvalue)}" scope="page" />
-<isset name="percentage" value="${promotionMessage}" scope="page" />
+
 <p class="discountPercentageMessage">
-    <isprint value="${percentage}" encoding="off" />
+    <isprint value="${promotionMessage}" encoding="off" />
 </p>
