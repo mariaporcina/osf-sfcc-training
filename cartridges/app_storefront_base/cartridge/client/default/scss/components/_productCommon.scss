@@ -41,6 +41,11 @@
 
     .price {
         text-align: center;
+
+        .discountPercentageMessage{
+            color: red;
+            font-weight: bold;
+        }
     }
 }
 

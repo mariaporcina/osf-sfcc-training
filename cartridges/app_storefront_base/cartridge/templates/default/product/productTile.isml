@@ -1,4 +1,4 @@
-<isinclude template="/components/modules" sf-toolkit="off" />
+
 
 <div class="product-tile">
     <!-- dwMarker="product" dwContentID="${product.uuid}" -->
@@ -16,8 +16,6 @@
         <iselse>
             <isinclude template="product/components/pricing/main" />
         </isif>
-
-        <isdiscountpercentage discountvalue="35" />
 
         <isif condition="${pdict.display.ratings !== false}">
             <isinclude template="product/productTileFooter" />

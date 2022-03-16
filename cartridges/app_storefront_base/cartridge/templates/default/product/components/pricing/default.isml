@@ -1,6 +1,7 @@
+<isinclude template="/components/modules" sf-toolkit="off" />
+
 <span>
     <isset name="finalOrigPrice" value="${price}" scope="page" />
-
     <isif condition="${finalOrigPrice.list !== null}">
         <isset name="price" value="${finalOrigPrice.list}" scope="page" />
         <del>
@@ -30,6 +31,7 @@
             <span class="value" content="${price.decimalPrice}">
         </isif>
         <isinclude template="/product/components/pricing/formatted" />
-        </span>
     </span>
 </span>
+
+<isdiscountpercentage discountvalue="${pdict.percentageDiscount}" />
