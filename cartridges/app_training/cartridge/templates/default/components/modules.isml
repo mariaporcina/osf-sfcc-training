@@ -7,8 +7,3 @@
 	name="customcontent"
 	attribute="aid"
 />
-
-<ismodule template="/product/components/promotion/discountPercentage"
-	name="discountpercentage"
-	attribute="discountvalue"
-/>

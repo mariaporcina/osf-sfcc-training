@@ -17,8 +17,6 @@
             <isinclude template="product/components/pricing/main" />
         </isif>
 
-        <isdiscountpercentage discountvalue="35" />
-
         <isif condition="${pdict.display.ratings !== false}">
             <isinclude template="product/productTileFooter" />
         </isif>
