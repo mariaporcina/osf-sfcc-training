@@ -3,7 +3,7 @@
 	attribute="aid"
 />
 
-<ismodule template="/components/content/customContent"
-	name="customcontent"
-	attribute="aid"
+<ismodule template="/cart/components/cartTotalMessage"
+	name="carttotalmessage"
+	attribute="threshold"
 />

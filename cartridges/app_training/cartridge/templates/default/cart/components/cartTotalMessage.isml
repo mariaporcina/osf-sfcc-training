@@ -1,0 +1,4 @@
+<p class="basketTotalMessage">
+    <isset name="cartTotalWarning" value="${Resource.msgf('info.cart.user.baskettotalprice', 'cart', null, pdict.threshold)}" scope="page" />
+    <isprint value="${cartTotalWarning}" />
+</p>
