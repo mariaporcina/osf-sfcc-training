@@ -4632,6 +4632,13 @@
                 <externally-managed-flag>false</externally-managed-flag>
                 <min-length>0</min-length>
             </attribute-definition>
+            <attribute-definition attribute-id="basketTotalThreshold">
+                <display-name xml:lang="x-default">Basket Total Threshold</display-name>
+                <type>double</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>200.0</default-value>
+            </attribute-definition>
             <attribute-definition attribute-id="checkTLS">
                 <display-name xml:lang="x-default">Check TLS</display-name>
                 <description xml:lang="x-default">When true, this causes a TLS check to take place based on whether or not a cookie ('dw_TLSWarning') has been set on the browser</description>

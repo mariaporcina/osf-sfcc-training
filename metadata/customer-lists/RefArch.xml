@@ -15,6 +15,37 @@
         <max-password-reset-token-age>30</max-password-reset-token-age>
     </header>
 
+    <customer customer-no="00000501">
+        <credentials>
+            <login>maria.porcina@osf.digital</login>
+            <password encrypted="true" encryptionScheme="scrypt">$s0$b0401$J54dpyMcLRuvseTh/fdVNg==$DaRDwKPVwJ43QwkWEChrWk1+L2CdO7IuBYNd0KoRHdM=</password>
+            <enabled-flag>true</enabled-flag>
+            <password-question/>
+            <password-answer/>
+        </credentials>
+        <profile>
+            <salutation/>
+            <title/>
+            <first-name>User</first-name>
+            <second-name/>
+            <last-name>Test</last-name>
+            <suffix/>
+            <company-name/>
+            <job-title/>
+            <email>maria.porcina@osf.digital</email>
+            <phone-home/>
+            <phone-business/>
+            <phone-mobile/>
+            <fax/>
+            <gender>0</gender>
+            <creation-date>2022-03-21T14:36:11.000Z</creation-date>
+            <last-login-time>2022-03-21T20:48:20.000Z</last-login-time>
+            <last-visit-time>2022-03-21T20:48:20.000Z</last-visit-time>
+            <preferred-locale/>
+        </profile>
+        <note/>
+    </customer>
+
     <customer customer-no="D00000001">
         <credentials>
             <login>testuser1@demandware.com</login>
