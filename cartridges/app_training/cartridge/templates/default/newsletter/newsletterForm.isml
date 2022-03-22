@@ -1,0 +1,44 @@
+<isdecorate template="common/layout/page">
+    <div class="container">
+        <iscomment> <h1>
+            <isprint value="${pageTitle}" encoding="off" />
+        </h1> </iscomment>
+
+        <div class="hero slant-down search-banner">
+            <h1 class="header page-title">
+                <isset name="pageTitle" value="Newsletter" scope="page" />
+                <isprint value="${pageTitle}" encoding="htmlcontent" />
+            </h1>
+        </div>
+
+        <form class="registration" method="POST" name="${pdict.form.htmlName}">
+            <div class="form-group">
+                <label class="form-control-label" for="email">
+                    <isprint value="${pdict.form.newsletter.email.label}" encoding="htmlcontent" />
+                </label>
+                <input class="form-control" type="text" name="email" id="email" <isprint value=${pdict.form.newsletter.email.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-fname-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-control-label" for="firstname">
+                    <isprint value="${pdict.form.newsletter.firstname.label}" encoding="htmlcontent" />
+                </label>
+                <input class="form-control" type="text" name="firstname" id="firstname" <isprint value=${pdict.form.newsletter.firstname.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-fname-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-control-label" for="lastname">
+                    <isprint value="${pdict.form.newsletter.lastname.label}" encoding="htmlcontent" />
+                </label>
+                <input class="form-control" type="text" name="lastname" id="lastname" <isprint value=${pdict.form.newsletter.lastname.attributes} encoding="off" />>
+                <div class="invalid-feedback" id="form-fname-error"></div>
+            </div>
+
+            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+
+            <button type="submit" class="btn btn-block btn-primary">Save</button>
+        </form>
+    </div>
+</isdecorate>
