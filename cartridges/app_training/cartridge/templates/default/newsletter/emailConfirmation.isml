@@ -1,0 +1,18 @@
+<isset name="subscriber" value="${pdict.subscriber}" scope="page" />
+
+<h1>
+    <isprint value="${Resource.msgf('email.confirmation.title', 'newsletter', null, subscriber.firstname, subscriber.lastname)}" encoding="htmlcontent" />
+</h1>
+<p>
+    <isprint value="${Resource.msg('email.confirmation.text', 'newsletter', null)}" encoding="htmlcontent" />
+</p>
+
+<isif condition="${subscriber.couponcode === null}">
+    <p>
+        <isprint value="${Resource.msg('email.confirmation.text.nocoupon', 'newsletter', null)}" encoding="htmlcontent" />
+    </p>
+<iselse/>
+    <p>
+        <isprint value="${Resource.msgf('email.confirmation.text.coupon', 'newsletter', null, subscriber.couponcode)}" encoding="htmlcontent" />
+    </p>
+</isif>
