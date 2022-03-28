@@ -1,0 +1,27 @@
+{
+    "@type-id": "custom.automaticCategoryAssignation",
+    "@supports-parallel-execution": "false",
+    "@supports-site-context": "false",
+    "module": "cartridges/app_training/cartridge/scripts/job/categoryAssignation.js",
+    "function": "execute",
+    "transactional": "true",
+    "parameters": {
+        "paramater": [
+            {
+                "@name": "brand",
+                "@type": "string",
+                "@required": "true"
+            }
+        ]
+    },
+    "status-codes": {
+        "status": [
+            {
+                "@code": "ERROR"
+            },
+            {
+                "@code": "OK"
+            }
+        ]
+    }
+}

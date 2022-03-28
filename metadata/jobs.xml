@@ -53,4 +53,70 @@
         </triggers>
     </job>
 
+    <job job-id="testjob" priority="0">
+        <description>My test job</description>
+        <parameters/>
+        <flow>
+            <context site-id="RefArch"/>
+            <step step-id="testjob" type="ExecuteScriptModule" enforce-restart="false">
+                <description>Test job logging Hello World</description>
+                <parameters>
+                    <parameter name="ExecuteScriptModule.Module">app_training/cartridge/scripts/job/testJob.js</parameter>
+                    <parameter name="ExecuteScriptModule.FunctionName">execute</parameter>
+                    <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                    <parameter name="firstParam">Hello World</parameter>
+                    <parameter name="secondParam">From</parameter>
+                    <parameter name="thirdParam">Job Export</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2022-03-24Z</date>
+                <time>18:57:44.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="automaticCategoryAssignation" priority="0">
+        <description>Job created for the Automatic Category Assignation challenge, from the SFRA backend course</description>
+        <parameters>
+            <parameter name="SiteScope"/>
+        </parameters>
+        <flow>
+            <context site-id="RefArch"/>
+            <step step-id="automaticCategoryAssignation" type="ExecuteScriptModule" enforce-restart="false">
+                <description>Step for the Automatic Category Assignation job</description>
+                <parameters>
+                    <parameter name="ExecuteScriptModule.Module">app_training/cartridge/scripts/job/categoryAssignation.js</parameter>
+                    <parameter name="ExecuteScriptModule.FunctionName">execute</parameter>
+                    <parameter name="ExecuteScriptModule.Transactional">false</parameter>
+                    <parameter name="brand">Nintendo</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <flow>
+            <context site-id="Sites"/>
+            <step step-id="importXMLFile" type="ImportCatalog" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="WorkingFolder">category/</parameter>
+                    <parameter name="NoFilesFoundHandling">NO_FILES_FOUND</parameter>
+                    <parameter name="ImportMode">Merge</parameter>
+                    <parameter name="ImportFailedHandling">WARN</parameter>
+                    <parameter name="AfterImportFileHandling">Keep</parameter>
+                    <parameter name="ArchiveFolder">archive</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2022-03-24Z</date>
+                <time>20:29:20.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
 </jobs>
