@@ -1,0 +1,21 @@
+<div class="modal-dialog modal-dialog-centered my-modal" role="document">
+    <div class="modal-content ajax-spinner modal-with-radius">
+        <div class="modal-header">
+            <h4 class="modal-title newsletter-subscription-title">${Resource.msg('modal.confirmation.text.title','newsletter',null)}</h4>
+            <button type="button" class="close-modal-button" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <p>${Resource.msg('modal.confirmation.text.content', 'newsletter', null)}</p>
+        </div>
+        <div class="modal-footer text-right">
+            <button class="newsletter-modal-cancel-button btn btn-outline-primary">
+                ${Resource.msg('modal.confirmation.text.cancel', 'newsletter', null)}
+            </button>
+            <button class="newsletter-modal-button btn btn-primary" data-url="${pdict.actionUrl}">
+                ${Resource.msg('modal.confirmation.text.yes', 'newsletter', null)}
+            </button>
+        </div>
+    </div>
+</div>

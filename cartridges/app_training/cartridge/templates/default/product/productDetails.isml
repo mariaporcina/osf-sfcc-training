@@ -123,6 +123,7 @@
 
                             <!-- Cart and [Optionally] Apple Pay -->
                             <isinclude template="product/components/addToCartProduct" />
+                            <isinclude template="product/components/showModal" />
                         </div>
 
                         <!-- Social Sharing Icons -->

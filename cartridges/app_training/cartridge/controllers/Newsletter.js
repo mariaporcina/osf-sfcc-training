@@ -10,8 +10,19 @@ server.get('Show', function(req, res, next) {
 
     res.render('newsletter/newsletterForm', {
         form: form,
+        actionUrl: URLUtils.url('Newsletter-ModalShow').toString()
+    });
+    return next();
+});
+
+//Add _ before req if the variable is not being used. This is necessary so Lint won't fail
+server.get('ModalShow', function (_req, res, next) {
+    var URLUtils = require('dw/web/URLUtils');
+
+    res.render('newsletter/components/newsletterModal', {
         actionUrl: URLUtils.url('Newsletter-Confirmation').toString()
     });
+
     return next();
 });
 
@@ -24,6 +35,7 @@ server.post('Confirmation', function(req, res, next) {
     var Template = require('dw/util/Template');
     var Site = require('dw/system/Site');
     var Resource = require('dw/web/Resource');
+    var URLUtils = require('dw/web/URLUtils');
 
     var form = server.forms.getForm('newsletter');
 
@@ -70,8 +82,9 @@ server.post('Confirmation', function(req, res, next) {
         mail.send();
     }
 
-    res.render('newsletter/newsletterForm', {
-        form: form
+    res.json({
+        form: form,
+        redirectUrl: URLUtils.home().toString()
     });
 
     return next();

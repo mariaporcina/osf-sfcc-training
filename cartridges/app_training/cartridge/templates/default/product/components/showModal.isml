@@ -1,0 +1,12 @@
+<isscript>
+        var assets = require('*/cartridge/scripts/assets');
+        assets.addJs('/js/productModal.js');
+    </isscript>
+<div class="row showmodal-cart">
+    <div class="col-sm-12">
+        <button class="mymodal-tutorial btn btn-warning" data-modal-url="${URLUtils.url('Product-ModalShow')}">
+                <i class="fa fa-shopping-bag"></i>
+                ${Resource.msg('button.exercise.showmodal', 'product', null)}
+        </button>
+    </div>
+</div>
