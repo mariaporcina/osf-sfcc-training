@@ -1,6 +1,6 @@
 'use strict';
 
-const test = () => {
+const initLoginFunctionality = () => {
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '391956239599920',
@@ -69,11 +69,11 @@ const loginIn = () => {
 }
 
 const logout = () => {
-  FB.logout(response => {
+  FB.logout(() => {
     console.log('You were logged out from Facebook. To login again click on the "Authenticate" button.')
   });
 }
 
 module.exports = () => {
-  test()
+  initLoginFunctionality()
 }
