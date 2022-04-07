@@ -3,5 +3,5 @@
 var processInclude = require('./util');
 
 $(document).ready(function () {
-    processInclude(require('./facebook/login/loginSetup'));
+    processInclude(require('./facebook/loginSetup'));
 });
