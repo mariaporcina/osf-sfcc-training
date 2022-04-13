@@ -1,0 +1,16 @@
+<isdecorate template="common/layout/page">
+    <div class="container">
+        <isset name="products" value="${pdict.productList}" scope="page" />
+
+        <div class="row">
+            <isloop items="${products}" var="product">
+                <isset name="productID" value="${product.product_id}" scope="page" />
+                <div class="col-sm-3">
+                    <isobject object="${product.productSearchHit}" view="searchhit">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', productID, 'swatches', true, 'ratings', true)}" />
+                    </isobject>
+                </div>
+            </isloop>
+        </div>
+    </div>
+</isdecorate>
