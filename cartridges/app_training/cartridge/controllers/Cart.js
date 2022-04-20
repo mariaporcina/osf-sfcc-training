@@ -6,12 +6,13 @@ server.extend(module.superModule);
 
 server.append('AddProduct', function(req, res, next) {
     var Site = require('dw/system/Site');
-    var Mail = require('dw/net/Mail');
     var BasketMgr = require('dw/order/BasketMgr');
     var HashMap = require('dw/util/HashMap');
     var Template = require('dw/util/Template');
     var Resource = require('dw/web/Resource');
     var URLUtils = require('dw/web/URLUtils');
+
+    var emailHelpers = require('*/cartridge/scripts/helpers/emailHelpers');
 
     var currentSite = Site.getCurrent();
     var fromEmail = currentSite.getCustomPreferenceValue('customerServiceEmail');
@@ -36,18 +37,13 @@ server.append('AddProduct', function(req, res, next) {
         priceCurrency: productPrice.pricePerUnit.currencyCode
     }
 
-    var hashMap = new HashMap();
-    hashMap.put('product', productAttributes);
+    var emailObject = {
+        to: customerEmail,
+        from: fromEmail,
+        subject: Resource.msg('msg.mail.added.tocart.subject', 'cart', null)
+    }
 
-    var template = new Template('cart/mailAddedProduct.isml');
-    var emailContent = template.render(hashMap);
-
-    var mail = new Mail();
-    mail.addTo(customerEmail);
-    mail.setFrom(fromEmail);
-    mail.setSubject(Resource.msg('msg.mail.added.tocart.product.subject', 'cart', null));
-    mail.setContent(emailContent);
-    mail.send();
+    emailHelpers.send(emailObject, 'cart/mailAddedProduct.isml', productAttributes);
 
     return next();
 });

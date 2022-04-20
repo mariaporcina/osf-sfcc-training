@@ -1,14 +1,14 @@
-<isprint value="${Resource.msg('msg.mail.added.tocart.product.content.title', 'cart', null)}" encoding="off" />
+<isprint value="${Resource.msg('msg.mail.added.tocart.title', 'cart', null)}" encoding="off" />
 
 <isset name="product" value="${pdict.product}" scope="page" />
 <div class="product-tile">
-    <a href="${product.productURL}">
-        <img src="${product.productImage}" alt="${product.productName}" title="${product.productName}" />
+    <a href="${pdict.productURL}">
+        <img src="${pdict.productImage}" alt="${pdict.productName}" title="${pdict.productName}" />
     </a>
     <div>
-        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.content.productname', 'cart', null)}" encoding="on" /> <a href="${product.productURL}">${product.productName}</a></p>
-        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.content.productdescription', 'cart', null)}" encoding="on" /> ${product.productDescription}</p>
-        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.content.productprice', 'cart', null)}" encoding="on" /> ${product.priceCurrency} ${product.pricePerUnit}</p>
-        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.content.productquantity', 'cart', null)}" encoding="on" /> ${product.productQuantity}</p>
+        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.name', 'cart', null)}" encoding="on" /> <a href="${pdict.productURL}">${pdict.productName}</a></p>
+        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.description', 'cart', null)}" encoding="on" /> ${pdict.productDescription}</p>
+        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.price', 'cart', null)}" encoding="on" /> ${pdict.priceCurrency} ${pdict.pricePerUnit}</p>
+        <p><isprint value="${Resource.msg('msg.mail.added.tocart.product.quantity', 'cart', null)}" encoding="on" /> ${pdict.productQuantity}</p>
     </div>
 </div>
