@@ -36,3 +36,5 @@ storefrontdata/
 test/appium/webdriver/config.json
 .vscode
 .history
+
+cartridges/app_training/cartridge/static/
