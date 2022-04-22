@@ -5,9 +5,10 @@ var server = require('server');
 server.extend(module.superModule);
 
 server.append('Show', function(req, res, next) {
-    var viewData = res.getViewData();
-    viewData.example = "One string";
-    res.setViewData(viewData);
+    var BasketMgr = require('dw/order/BasketMgr');
+
+    var currentBasket = BasketMgr.getCurrentBasket();
+    var shippingPrice = currentBasket.getShippingTotalPrice();
 
     return next();
 });

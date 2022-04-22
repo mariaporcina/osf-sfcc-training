@@ -56,6 +56,7 @@
     "isml-linter": "^5.22.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.14.6",
+    "sgmf-scripts": "^2.4.1",
     "xzoom": "^1.0.14"
   }
 }
