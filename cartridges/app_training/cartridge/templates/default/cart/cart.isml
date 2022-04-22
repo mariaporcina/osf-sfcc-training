@@ -2,7 +2,7 @@
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addCss('/css/cart.css');
-        assets.addJs('/js/shipping.js');
+        //assets.addJs('/js/shipping.js');
     </isscript>
 
     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
@@ -98,4 +98,7 @@
     <div class="container">
         <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
     </div>
+
+    <iscomment> <isinclude template="components/cart/freeShippingModal" /> </iscomment>
+
 </isdecorate>

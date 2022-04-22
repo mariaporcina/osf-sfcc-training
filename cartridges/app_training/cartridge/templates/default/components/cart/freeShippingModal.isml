@@ -1,3 +1,5 @@
-<div class="modal fade my-exercise-modal">
-    <p>teste</p>
+<div class="freeShippingModal modalContainer" data-url="${pdict.url}">
+    <h2>modal title</h2>
+    <p>coupon: fre-shipping</p>
+    <button class="closeModal">OK</button>
 </div>
