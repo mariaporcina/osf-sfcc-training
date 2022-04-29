@@ -7,84 +7,87 @@
 <isinclude template="/components/modules" sf-toolkit="off" />
 
 <isdecorate template="common/layout/page">
-    <!-- Slider main container -->
-    <iscomment> <div class="swiper navigation-swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide swiper-slide-0">
-                <iscontentasset aid="carouselImage0" />
+    <div class="container">
+
+        <!-- Slider main container -->
+        <div class="swiper navigation-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide swiper-slide-0">
+                    <iscontentasset aid="carouselImage0" />
+                </div>
+                <div class="swiper-slide swiper-slide-1">
+                    <iscontentasset aid="carouselImage1" />
+                </div>
+                <div class="swiper-slide swiper-slide-2">
+                    <iscontentasset aid="carouselImage2" />
+                </div>
+                <div class="swiper-slide swiper-slide-3">
+                    <iscontentasset aid="carouselImage3" />
+                </div>
+                <div class="swiper-slide swiper-slide-4">
+                    <iscontentasset aid="carouselImage4" />
+                </div>
+                <div class="swiper-slide swiper-slide-5">
+                    <iscontentasset aid="carouselImage5" />
+                </div>
+                <div class="swiper-slide swiper-slide-6">
+                    <iscontentasset aid="carouselImage6" />
+                </div>
             </div>
-            <div class="swiper-slide swiper-slide-1">
-                <iscontentasset aid="carouselImage1" />
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button swiper-button-prev navigation-swiper-prev">
+                <i class="fa fa-arrow-left fa-stack-1x"></i>
             </div>
-            <div class="swiper-slide swiper-slide-2">
-                <iscontentasset aid="carouselImage2" />
+            <div class="swiper-button swiper-button-next navigation-swiper-next">
+                <i class="fa fa-arrow-right fa-stack-1x"></i>
             </div>
-            <div class="swiper-slide swiper-slide-3">
-                <iscontentasset aid="carouselImage3" />
-            </div>
-            <div class="swiper-slide swiper-slide-4">
-                <iscontentasset aid="carouselImage4" />
-            </div>
-            <div class="swiper-slide swiper-slide-5">
-                <iscontentasset aid="carouselImage5" />
-            </div>
-            <div class="swiper-slide swiper-slide-6">
-                <iscontentasset aid="carouselImage6" />
-            </div>
+
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
 
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
+        <!-- Slider main container -->
+        <div class="swiper main-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide swiper-slide-0">
+                    <iscontentasset aid="carouselImage0" />
+                </div>
+                <div class="swiper-slide swiper-slide-1">
+                    <iscontentasset aid="carouselImage1" />
+                </div>
+                <div class="swiper-slide swiper-slide-2">
+                    <iscontentasset aid="carouselImage2" />
+                </div>
+                <div class="swiper-slide swiper-slide-3">
+                    <iscontentasset aid="carouselImage3" />
+                </div>
+                <div class="swiper-slide swiper-slide-4">
+                    <iscontentasset aid="carouselImage4" />
+                </div>
+                <div class="swiper-slide swiper-slide-5">
+                    <iscontentasset aid="carouselImage5" />
+                </div>
+                <div class="swiper-slide swiper-slide-6">
+                    <iscontentasset aid="carouselImage6" />
+                </div>
+            </div>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button swiper-button-prev main-swiper-prev">
+                <i class="fa fa-arrow-left fa-stack-1x"></i>
+            </div>
+            <div class="swiper-button swiper-button-next main-swiper-next">
+                <i class="fa fa-arrow-right fa-stack-1x"></i>
+            </div>
 
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
-    </div> </iscomment>
-
-    <!-- Slider main container -->
-    <div class="swiper main-swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide swiper-slide-0">
-                <iscontentasset aid="carouselImage0" />
-            </div>
-            <div class="swiper-slide swiper-slide-1">
-                <iscontentasset aid="carouselImage1" />
-            </div>
-            <div class="swiper-slide swiper-slide-2">
-                <iscontentasset aid="carouselImage2" />
-            </div>
-            <div class="swiper-slide swiper-slide-3">
-                <iscontentasset aid="carouselImage3" />
-            </div>
-            <div class="swiper-slide swiper-slide-4">
-                <iscontentasset aid="carouselImage4" />
-            </div>
-            <div class="swiper-slide swiper-slide-5">
-                <iscontentasset aid="carouselImage5" />
-            </div>
-            <div class="swiper-slide swiper-slide-6">
-                <iscontentasset aid="carouselImage6" />
-            </div>
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
         </div>
 
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <iscomment> <div class="main-swiper-prev"></div>
-        <div class="main-swiper-next"></div> </iscomment>
-
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-        <div class="swiper-scrollbar"></div>
     </div>
 </isdecorate>

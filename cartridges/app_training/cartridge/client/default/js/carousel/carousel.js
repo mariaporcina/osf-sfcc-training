@@ -3,60 +3,48 @@
 var Swiper = require('swiper');
 
 const mountCarousel = () => {
-    // console.log(new Swiper.Swiper);
-    // const Swiper = SwiperModule.Swiper;
-    // const navigationSwiper = new Swiper.Swiper('.navigation-swiper', {
-    //     // Optional parameters
-    //     direction: 'horizontal',
-    //     loop: true,
-    //     centeredSlides: true,
-    //     spaceBetween: 15,
+  const navigationSwiper = new Swiper.Swiper('.navigation-swiper', {
+    // Optional parameters
+    modules: [Swiper.Navigation],
+    direction: 'horizontal',
+    loop: true,
 
-    //     // If we need pagination
-    //     pagination: {
-    //         el: '.swiper-pagination',
-    //     },
+    // Navigation arrows
+    navigation: {
+      nextEl: '.navigation-swiper-next',
+      prevEl: '.navigation-swiper-prev',
+    },
+  });
 
-    //     // Navigation arrows
-    //     // navigation: {
-    //     //     nextEl: '.swiper-button-next',
-    //     //     prevEl: '.swiper-button-prev',
-    //     // },
-    // });
+  const mainSwiper = new Swiper.Swiper('.main-swiper', {
+    // Optional parameters
+    modules: [Swiper.Navigation],
+    direction: 'horizontal',
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 3,
 
-    const mainSwiper = new Swiper.Swiper('.main-swiper', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        spaceBetween: 15,
+    // Navigation arrows
+    navigation: {
+      nextEl: '.main-swiper-next',
+      prevEl: '.main-swiper-prev',
+    },
+
+    breakpoints: {
+      // when window width is >= 0px
+      0: {
+        slidesPerView: 1,
+      },
+      // when window width is >= 445px
+      445: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 600px
+      600: {
         slidesPerView: 3,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        breakpoints: {
-            // when window width is >= 320px
-            0: {
-              slidesPerView: 1,
-            },
-            // when window width is >= 480px
-            320: {
-              slidesPerView: 2,
-            },
-            // when window width is >= 640px
-            600: {
-              slidesPerView: 3,
-            }
-          }
-    });
+      }
+    }
+  });
 }
 
 module.exports = () => {
