@@ -1,0 +1,22 @@
+<isinclude template="/components/modules" />
+
+<isif condition="${!empty(slotcontent)}">
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <isloop items="${slotcontent.content}" var="product">
+                    <div class="swiper-slide">
+                        <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.ID, 'swatches', true, 'ratings', true)}" />
+                    </div>
+                </isloop>
+            </div>
+
+            <div class="swiper-button swiper-button-prev main-swiper-prev">
+                <i class="fa fa-arrow-left fa-stack-1x"></i>
+            </div>
+            <div class="swiper-button swiper-button-next main-swiper-next">
+                <i class="fa fa-arrow-right fa-stack-1x"></i>
+            </div>
+        </div>
+    </div>
+</isif>

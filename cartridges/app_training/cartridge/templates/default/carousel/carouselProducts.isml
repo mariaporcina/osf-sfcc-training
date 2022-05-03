@@ -1,0 +1,9 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets');
+    assets.addJs('/js/initCarousel.js');
+    assets.addCss('/css/swiper.css');
+</isscript>
+
+<isdecorate template="common/layout/page">
+    <isslot id="products-list" context="global" description="Slot to list 10 products" />
+</isdecorate>
