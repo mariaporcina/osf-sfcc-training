@@ -1,9 +1,5 @@
 <isset name="showQuickView" value="${true}" scope="page" />
 <isset name="product" value="${pdict.product}" scope="page" />
 <div class="product" data-pid="${product.id}">
-${pdict.pid}
-${badge.text}
-${badge.textColor}
-${badge.backgroundColor}
     <isinclude template="product/productTile" />
 </div>

@@ -1,0 +1,5 @@
+<div class="badgeBody">
+    <div class="badgeContent ${pdict.badge.textColor} ${pdict.badge.backgroundColor}">
+        <span>${pdict.badge.text}</span>
+    </div>
+</div>

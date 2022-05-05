@@ -25,6 +25,8 @@ server.append('Show', function(req, res, next) {
     viewData.badge = badgeConfiguration;
     res.setViewData(viewData);
 
+    res.render('search/searchResults');
+
     return next();
 });
 
