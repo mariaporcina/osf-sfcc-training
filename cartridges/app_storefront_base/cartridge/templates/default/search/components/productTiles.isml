@@ -1,7 +1,10 @@
 <isloop items="${pdict.productSearch.productIds}" var="product">
     <div class="col-6 col-sm-4">
+    ${pdict.badge.text}
+${pdict.badge.textColor}
+${pdict.badge.backgroundColor}
         <isobject object="${product.productSearchHit}" view="searchhit">
-            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true)}" />
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true, 'badge', pdict.badge)}" />
         </isobject>
     </div>
 </isloop>
