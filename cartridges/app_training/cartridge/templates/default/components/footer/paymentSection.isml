@@ -1,0 +1,35 @@
+<section class="paymentSection graySection">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>${Resource.msg('payment.section.trusted.shops', 'footer', null)}</h2>
+                <iscontentasset aid="footer-trusted-shops" />
+            </div>
+            <div class="col-sm-4">
+                <h2>${Resource.msg('payment.section.trusted.shops', 'footer', null)}</h2>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <iscontentasset aid="footer-payment-method-paypal" />
+                    </div>
+                    <div class="col-sm-4">
+                        <iscontentasset aid="footer-payment-method-master" />
+                    </div>
+                    <div class="col-sm-4">
+                        <iscontentasset aid="footer-payment-method-visa" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h2>${Resource.msg('payment.section.shipping.services', 'footer', null)}</h2>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <iscontentasset aid="footer-shipping-truck" />
+                    </div>
+                    <div class="col-sm-6">
+                        <iscontentasset aid="footer-shipping-bike" />
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</section>

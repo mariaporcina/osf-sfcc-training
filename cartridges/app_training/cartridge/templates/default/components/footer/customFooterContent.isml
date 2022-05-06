@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <iscontentasset aid="footer-top-section" />
+</div>
+
+<isinclude template="components/footer/paymentSection" sf-toolkit="on" />
+
+<div class="container-fluid">
+    <iscontentasset aid="footer-customer-service" />
+    <iscontentasset aid="footer-about-custom" />
+    <iscontentasset aid="footer-account-custom" />
+</div>
