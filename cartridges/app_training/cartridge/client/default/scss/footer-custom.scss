@@ -1,11 +1,33 @@
 .customFooter {
     background-color: var(--primary);
 
+    .row{
+        margin: 0;
+
+        .col-sm-4, .col-sm-6{
+            padding: 0;
+            text-align: center;
+        }
+
+        .col-sm-6{
+            img{
+                max-width: 200px;
+            }
+        }
+    }
+
     .graySection{
         background-color: #d3d3d3;
 
         img{
             width: 100%;
         }
+        img[alt="Trusted shops guarantee icon"]{
+            max-width: 100px;
+        }
+        img[alt="Payment method - Paypal logo"]{}
+        img[alt="Payment method - Mastercard logo"]{}
+        img[alt="Payment Method - Visa logo"]{}
+        img[alt="Shipping Service Bike"]{}
     }
 }
