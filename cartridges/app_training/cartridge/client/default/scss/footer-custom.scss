@@ -1,21 +1,55 @@
 .customFooter {
     background-color: var(--primary);
 
-    .row{
-        margin: 0;
-
-        .col-sm-4, .col-sm-6{
-            padding: 0;
+    h2{
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    h2.text-center{
+        text-transform: initial;
+        font-weight: initial;
+        font-size: 1.7rem;
+    }
+    .paymentSection{
+        h2{
             text-align: center;
+            text-transform: initial;
+            font-weight: initial;
         }
+        .row{
+            margin: 0;
+            justify-content: center;
 
-        .col-sm-6{
-            img{
-                max-width: 200px;
+            .col-sm-4, .col-sm-6{
+                padding: 0;
+                text-align: center;
+            }
+
+            .col-sm-6{
+                max-width: 40%;
+            }
+
+            .col-sm-4{
+                .row{
+                    align-items: center;
+                }
+                .col-sm-4{
+                    max-width: 24.333333%;
+                }
             }
         }
     }
+    .customerServiceSection{
+        text-align: left;
 
+        p{
+            margin-bottom: 0.2rem;
+        }
+        .customerServiceTitle{
+            font-weight: 600;
+        }
+    }
     .graySection{
         background-color: #d3d3d3;
 
@@ -23,11 +57,33 @@
             width: 100%;
         }
         img[alt="Trusted shops guarantee icon"]{
-            max-width: 100px;
+            max-width: 150px;
         }
-        img[alt="Payment method - Paypal logo"]{}
-        img[alt="Payment method - Mastercard logo"]{}
-        img[alt="Payment Method - Visa logo"]{}
-        img[alt="Shipping Service Bike"]{}
+    }
+    .content-asset{
+        ul{
+            display: flex;
+
+            li{
+                margin-right: 20px;
+            }
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
+.customFooter--simplified{
+    padding: 0;
+
+    section{
+        p{
+            margin: 0;
+            padding: 50px 0 70px;
+        }
+    }
+    .copyright{
+        padding: 0;
+        margin: 0;
     }
 }

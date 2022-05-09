@@ -4,7 +4,7 @@
     var controller = fullRoute.split('-')[0];
 </isscript>
 
-<footer id="footercontent" class="customFooter">
+<footer id="footercontent" class="customFooter <isif condition="${controller === 'Checkout'}">customFooter--simplified</isif>">
     <isif condition="${controller !== 'Checkout'}">
         <isinclude template="components/footer/customFooterContent.isml" sf-toolkit="on" />
     <iselse/>
