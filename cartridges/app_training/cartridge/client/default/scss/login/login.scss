@@ -1,9 +1,54 @@
 .login-page{
 
+    .col-sm-4{
+        padding: 0;
+    }
+
+    #loginCard, #checkOrderCard{
+        display: none;
+    }
+
+    figure{
+        position: relative;
+
+        img{
+            transition: ease-in-out .1s;
+            width: 100%;
+            filter: grayscale(100%);
+        }
+        figcaption{
+            position: absolute;
+            bottom: 10px;
+            left: 15px;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+
+    #loginCard:checked ~ .row{
+        figure[data-activated-form="loginCard"]{
+            img{
+                filter: none;
+            }
+        }
+    }
+
+    #checkOrderCard:checked ~ .row{
+        figure[data-activated-form="checkOrderCard"]{
+            img{
+                filter: none;
+            }
+        }
+    }
+
+    .card{
+        display: none;
+    }
+    .activeCard{
+        display: block;
+    }
     .login-button-image{
-        width: 100%;
     }
     .check-order-button-image{
-        width: 100%;
     }
 }

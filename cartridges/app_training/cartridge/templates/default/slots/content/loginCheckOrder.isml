@@ -1,9 +1,11 @@
 <isinclude template="/components/modules" />
 
-<isif condition="${!empty(slotcontent)}">
+<isif condition="${!empty(slotcontent) && slotcontent !== null}">
     <div class="container">
         <isloop items="${slotcontent.content}" var="contentAsset">
-            <isprint value="${contentAsset.custom.body}" encoding="off"/>
+            <label for="${contentAsset.custom['login-page-activated-form']}">
+                <isprint value="${contentAsset.custom.body}" encoding="off"/>
+            </label>
         </isloop>
     </div>
 </isif>

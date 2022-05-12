@@ -1,0 +1,2 @@
+<input type="radio" name="imageTab" id="loginCard" value="loginForm" checked>
+<input type="radio" name="imageTab" id="checkOrderCard" value="checkOrderForm">

@@ -4,6 +4,7 @@
         assets.addCss('/css/login.css');
         assets.addCss('/css/global.css');
         assets.addJs('/js/login.js');
+        assets.addJs('/js/main.js');
     </isscript>
 
     <div class="hero slant-down login-banner">
@@ -11,20 +12,24 @@
     </div>
     <div class="container login-page">
 
+        <isinclude template="account/components/radioInputs" sf-toolkit="on" />
+
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4">
                 <isslot id="login-button-image" context="global" description="Login Button Image" />
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <isslot id="check-order-button-image" context="global" description="Check Order Button Image" />
             </div>
+            <div class="col-sm-2"></div>
         </div>
 
         <!---Breadcrumbs--->
         <isinclude template="components/breadcrumbs/pageBreadcrumbs"/>
         <div class="row justify-content-center equal-height">
-            <div class="col-sm-8 col-md-6">
-                <div class="card">
+            <div class="col-sm-6">
+                <div class="card loginCard activeCard">
                     <div class="card-body">
                         <div class="login-form-nav">
                             <isinclude template="account/components/navTabs" />
@@ -41,9 +46,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-8 col-md-6">
-                <div class="card">
+                <div class="card checkOrderCard">
                     <isinclude template="account/components/trackOrderForm" />
                 </div>
             </div>
