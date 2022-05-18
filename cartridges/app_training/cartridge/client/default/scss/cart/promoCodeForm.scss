@@ -1,6 +1,18 @@
+#showPromoForm{
+    display: none;
+}
+#showPromoForm:checked ~ .promoCodeForm{
+    display: block;
+}
+#showPromoForm:checked ~ .containerShowForm{
+    display: none;
+}
 .promoCodeForm {
     display: none;
 }
 .showPromoFormButton{
+    cursor: pointer;
+}
+.labelShowPromoForm{
     cursor: pointer;
 }

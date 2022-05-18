@@ -1,7 +1,17 @@
 <div class="containerShowForm row">
     <div class="col-12">
+        <iscomment>
+        // solution using javascript only
         <p class="showPromoFormButton">
             <isprint value="${Resource.msg('text.show.promo.code.form', 'cart', null)}" encoding="off" />
         </p>
+
+        <===========>
+
+        // solution using css only
+        </iscomment>
+        <label for="showPromoForm" class="labelShowPromoForm">
+            <isprint value="${Resource.msg('text.show.promo.code.form', 'cart', null)}" encoding="off" />
+        </label>
     </div>
 </div>

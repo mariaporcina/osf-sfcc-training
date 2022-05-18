@@ -75,6 +75,8 @@
                 <!---totals, and checkout actions--->
                 <div class="col-sm-5 col-md-4 totals">
                     <div class="promoCodeContainer">
+                        <input type="checkbox" name="showPromoForm" id="showPromoForm" value="showPromoForm">
+
                         <isinclude template="cart/components/showPromoForm" sf-toolkit="on" />
 
                         <div class="promoCodeForm">
