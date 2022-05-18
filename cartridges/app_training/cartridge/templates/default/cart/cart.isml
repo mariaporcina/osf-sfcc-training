@@ -73,7 +73,13 @@
                 </div>
                 <!---totals, and checkout actions--->
                 <div class="col-sm-5 col-md-4 totals">
-                    <isinclude template="cart/cartPromoCode" />
+                    <div class="promo-code-container">
+                        <isinclude template="cart/components/showPromoForm" sf-toolkit="on" />
+
+                        <div class="promo-code-form">
+                            <isinclude template="cart/cartPromoCode" />
+                        </div>
+                    </div>
                     <div class="coupons-and-promos">
                         <isinclude template="cart/cartCouponDisplay" />
                     </div>
@@ -97,5 +103,4 @@
     <div class="container">
         <isslot id="cart-recommendations-m" description="Recommended products" context="global" />
     </div>
-    ${pdict.example}
 </isdecorate>
