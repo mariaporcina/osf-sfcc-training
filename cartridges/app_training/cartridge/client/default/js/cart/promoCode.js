@@ -2,10 +2,10 @@
 
 const showPromoForm = () => {
     const showPromo = $('div.containerShowForm');
-    const span = $('span.showPromoFormButton');
-    const form = $('div.promo-code-form');
+    const span = $('.showPromoFormButton');
+    const form = $('div.promoCodeForm');
 
-    span.on('click', function() {
+    $(span).on('click', function() {
         form.show();
         showPromo.hide();
     });

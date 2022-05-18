@@ -1,5 +1,7 @@
 <div class="containerShowForm row">
     <div class="col-12">
-        <p class="optional-promo">${Resource.msgf('text.show.promo.code.form', 'cart', null, <span class="showPromoFormButton">here</span>)}</p>
+        <p class="showPromoFormButton">
+            <isprint value="${Resource.msg('text.show.promo.code.form', 'cart', null)}" encoding="off" />
+        </p>
     </div>
 </div>

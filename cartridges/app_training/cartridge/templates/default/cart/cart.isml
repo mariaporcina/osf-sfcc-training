@@ -2,6 +2,7 @@
     <isscript>
         var assets = require('*/cartridge/scripts/assets.js');
         assets.addCss('/css/cart.css');
+        assets.addJs('/js/main.js');
     </isscript>
 
     <isif condition="${pdict.reportingURLs && pdict.reportingURLs.length}">
@@ -73,10 +74,10 @@
                 </div>
                 <!---totals, and checkout actions--->
                 <div class="col-sm-5 col-md-4 totals">
-                    <div class="promo-code-container">
+                    <div class="promoCodeContainer">
                         <isinclude template="cart/components/showPromoForm" sf-toolkit="on" />
 
-                        <div class="promo-code-form">
+                        <div class="promoCodeForm">
                             <isinclude template="cart/cartPromoCode" />
                         </div>
                     </div>
