@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <form class="filterForm">
-                    <input type="text" name="filterInput" placeholder="Type here">
+                <form class="filterForm" action="${pdict.actionUrl}" method="GET">
+                    <input type="text" name="filterInput" class="filterInput" placeholder="Type here">
                     <button type="submit" class="btn btn-primary">Open</button>
                 </form>
             </div>
