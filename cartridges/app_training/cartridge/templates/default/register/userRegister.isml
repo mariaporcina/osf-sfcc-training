@@ -1,0 +1,67 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/login.css');
+</isscript>
+
+<isdecorate template="common/layout/page">
+    <div class="hero slant-down login-banner">
+        <h1 class="page-title">${Resource.msg('register.page.title', 'userRegister', null)}</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="card">
+                    <h2 class="card-header">${Resource.msg('register.form.title', 'userRegister', null)}</h2>
+
+                    <div class="card-body">
+                        <form method="POST" action="${pdict.actionUrl}">
+                            <div class="form-group">
+                                <label for="firstName" class="form-control-label">
+                                    <isprint value="${pdict.registerForm.userRegister.firstName.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="text" name="firstName" id="firstName" class="form-control"
+                                    <isprint value="${pdict.registerForm.userRegister.firstName.attributes}" encoding="off" />
+                                >
+                                <div class="invalid-feedback" id="form-fname-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lastName" class="form-control-label">
+                                    <isprint value="${pdict.registerForm.userRegister.lastName.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="text" name="lastName" id="lastName" class="form-control"
+                                    <isprint value="${pdict.registerForm.userRegister.lastName.attributes}" encoding="off" />
+                                >
+                                <div class="invalid-feedback" id="form-fname-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-control-label">
+                                    <isprint value="${pdict.registerForm.userRegister.email.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="text" name="email" id="email" class="form-control"
+                                    <isprint value="${pdict.registerForm.userRegister.email.attributes}" encoding="off" />
+                                >
+                                <div class="invalid-feedback" id="form-fname-error"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone" class="form-control-label">
+                                    <isprint value="${pdict.registerForm.userRegister.phone.label}" encoding="htmlcontent" />
+                                </label>
+                                <input type="text" name="phone" id="phone" class="form-control"
+                                    <isprint value="${pdict.registerForm.userRegister.phone.attributes}" encoding="off" />
+                                >
+                                <div class="invalid-feedback" id="form-fname-error"></div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">${Resource.msg('register.form.button', 'userRegister', null)}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+</isdecorate>

@@ -1,5 +1,5 @@
 <div class="freeShippingModal modalContainer" data-url="${pdict.url}">
     <h2>modal title</h2>
-    <p>coupon: fre-shipping</p>
+    <p>coupon: free-shipping</p>
     <button class="closeModal">OK</button>
 </div>
