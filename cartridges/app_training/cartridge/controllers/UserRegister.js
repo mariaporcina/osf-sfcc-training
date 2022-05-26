@@ -4,31 +4,35 @@ var server = require('server');
 
 server.get('Show', function(req, res, next){
     var URLUtils = require('dw/web/URLUtils');
+    var BasketMgr = require('dw/order/BasketMgr');
 
-    var registerForm = server.forms.getForm('userRegister');
-    registerForm.clear();
+    var currentBasket = BasketMgr.getCurrentBasket();
+
+    // var registerForm = server.forms.getForm('userRegister');
+    // registerForm.clear();
 
     res.render('register/userRegister', {
-        registerForm: registerForm,
-        actionUrl: URLUtils.url('UserRegister-Registration').toString()
+        // registerForm: registerForm,
+        // actionUrl: URLUtils.url('UserRegister-Registration').toString()
     });
     return next();
 });
 
-server.post('Registration', function(req, res, next){
-    var registerForm = server.forms.getForm('userRegister');
+// server.post('Registration', function(req, res, next){
+//     var registerForm = server.forms.getForm('userRegister');
 
-    var firstName = registerForm.userRegister.firstName.htmlValue
+//     var firstName = registerForm.profile.firstname.htmlValue
 
-    var userData = {
-        firstName: firstName
-    }
+//     var userData = {
+//         firstName: firstName
+//     }
 
-    res.render('register/registration', {
-        registerForm: registerForm
-    });
+//     res.render('register/registration', {
+//         registerForm: registerForm,
+//         userData: userData
+//     });
 
-    return next();
-});
+//     return next();
+// });
 
 module.exports = server.exports();

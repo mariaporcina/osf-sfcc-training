@@ -15,43 +15,43 @@
                     <h2 class="card-header">${Resource.msg('register.form.title', 'userRegister', null)}</h2>
 
                     <div class="card-body">
-                        <form method="POST" action="${pdict.actionUrl}">
+                        <form method="POST" action="${pdict.actionUrl}" name="${pdict.registerForm.htmlName}">
                             <div class="form-group">
-                                <label for="firstName" class="form-control-label">
-                                    <isprint value="${pdict.registerForm.userRegister.firstName.label}" encoding="htmlcontent" />
+                                <label for="firstname" class="form-control-label">
+                                    <isprint value="${pdict.registerForm.profile.firstname.label}" encoding="htmlcontent" />
                                 </label>
-                                <input type="text" name="firstName" id="firstName" class="form-control"
-                                    <isprint value="${pdict.registerForm.userRegister.firstName.attributes}" encoding="off" />
+                                <input type="text" name="firstname" id="firstname" class="form-control"
+                                    <isprint value="${pdict.registerForm.profile.firstname.attributes}" encoding="off" />
                                 >
                                 <div class="invalid-feedback" id="form-fname-error"></div>
                             </div>
 
                             <div class="form-group">
-                                <label for="lastName" class="form-control-label">
-                                    <isprint value="${pdict.registerForm.userRegister.lastName.label}" encoding="htmlcontent" />
+                                <label for="lastname" class="form-control-label">
+                                    <isprint value="${pdict.registerForm.profile.lastname.label}" encoding="htmlcontent" />
                                 </label>
-                                <input type="text" name="lastName" id="lastName" class="form-control"
-                                    <isprint value="${pdict.registerForm.userRegister.lastName.attributes}" encoding="off" />
+                                <input type="text" name="lastname" id="lastname" class="form-control"
+                                    <isprint value="${pdict.registerForm.profile.lastname.attributes}" encoding="off" />
                                 >
                                 <div class="invalid-feedback" id="form-fname-error"></div>
                             </div>
 
                             <div class="form-group">
                                 <label for="email" class="form-control-label">
-                                    <isprint value="${pdict.registerForm.userRegister.email.label}" encoding="htmlcontent" />
+                                    <isprint value="${pdict.registerForm.profile.email.label}" encoding="htmlcontent" />
                                 </label>
                                 <input type="text" name="email" id="email" class="form-control"
-                                    <isprint value="${pdict.registerForm.userRegister.email.attributes}" encoding="off" />
+                                    <isprint value="${pdict.registerForm.profile.email.attributes}" encoding="off" />
                                 >
                                 <div class="invalid-feedback" id="form-fname-error"></div>
                             </div>
 
                             <div class="form-group">
                                 <label for="phone" class="form-control-label">
-                                    <isprint value="${pdict.registerForm.userRegister.phone.label}" encoding="htmlcontent" />
+                                    <isprint value="${pdict.registerForm.profile.phone.label}" encoding="htmlcontent" />
                                 </label>
                                 <input type="text" name="phone" id="phone" class="form-control"
-                                    <isprint value="${pdict.registerForm.userRegister.phone.attributes}" encoding="off" />
+                                    <isprint value="${pdict.registerForm.profile.phone.attributes}" encoding="off" />
                                 >
                                 <div class="invalid-feedback" id="form-fname-error"></div>
                             </div>

@@ -7,7 +7,7 @@
                     <h2 class="card-header">Registered User</h2>
                     <div class="card-body">
                         <ul>
-                            <li><strong>User Full Name:</strong> ${pdict.userData.firstName}</li>
+                            <li><strong>User Full Name:</strong> </li>
                             <li><strong>User Email:</strong> </li>
                             <li><strong>User Phone:</strong> </li>
                         </ul>

@@ -1,7 +1,7 @@
 <form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
-    <group formid="userRegister">
+    <group formid="profile">
         <field
-            formid="firstName"
+            formid="firstname"
             label="label.input.firstname.profile"
             mandatory="true"
             max-length="50"
@@ -10,7 +10,7 @@
             type="string" />
 
         <field
-            formid="lastName"
+            formid="lastname"
             label="label.input.lastname.profile"
             mandatory="true"
             max-length="50"
@@ -26,7 +26,6 @@
             missing-error="error.message.required"
             parse-error="error.message.parse.email.profile.form"
             range-error="error.message.50orless"
-            regexp="^[\w.%+-]+@[\w.-]+\.[\w]{2,6}$"
             type="string" />
 
         <field
