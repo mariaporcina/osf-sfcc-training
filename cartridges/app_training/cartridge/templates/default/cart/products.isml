@@ -3,6 +3,9 @@
         <div class="row">
             <isloop items="${pdict.productsList}" var="product" status="loopstatus">
                 <div class="col-sm-4">
+                    <iscomment> <img src="" alt="">
+                    <h2>${product.lineItemText}</h2>
+                    <p>${product.basePrice}</p> </iscomment>
                     <isinclude url="${URLUtils.url('Tile-Show', 'pid', product.productID, 'swatches', true, 'ratings', true, 'showQuickView', false)}" />
                 </div>
             </isloop>
