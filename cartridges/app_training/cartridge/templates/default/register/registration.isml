@@ -1,15 +1,24 @@
 <isdecorate template="common/layout/page">
+    <isscript>
+        var assets = require('*/cartridge/scripts/assets.js');
+        assets.addCss('/css/login.css');
+    </isscript>
+
+    <div class="hero slant-down login-banner">
+        <h1 class="page-title">${Resource.msg('registration.page.title', 'userRegister', null)}</h1>
+    </div>
+
     <div class="container">
         <div class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <div class="card">
-                    <h2 class="card-header">Registered User</h2>
+                    <h2 class="card-header">${Resource.msg('registration.section.title', 'userRegister', null)}</h2>
                     <div class="card-body">
                         <ul>
-                            <li><strong>User Full Name:</strong> </li>
-                            <li><strong>User Email:</strong> </li>
-                            <li><strong>User Phone:</strong> </li>
+                            <li><strong>${Resource.msg('registration.section.fullname', 'userRegister', null)}</strong> ${pdict.userData.firstName} ${pdict.userData.lastName}</li>
+                            <li><strong>${Resource.msg('registration.section.email', 'userRegister', null)}</strong> ${pdict.userData.email}</li>
+                            <li><strong>${Resource.msg('registration.section.phone', 'userRegister', null)}</strong> ${pdict.userData.phone}</li>
                         </ul>
                     </div>
                 </div>

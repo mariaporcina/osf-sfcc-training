@@ -1,7 +1,18 @@
-<form xmlns="http://www.demandware.com/xml/form/2008-04-19" secure="false">
-    <group formid="profile">
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+    <group formid="userprofile">
         <field
-            formid="firstname"
+            formid="useremail"
+            label="label.input.email.profile"
+            mandatory="true"
+            max-length="50"
+            missing-error="error.message.required"
+            parse-error="error.message.parse.email.profile.form"
+            range-error="error.message.50orless"
+            value-error="ValueErrorText"
+            type="string" />
+
+        <field
+            formid="userfirstname"
             label="label.input.firstname.profile"
             mandatory="true"
             max-length="50"
@@ -10,7 +21,7 @@
             type="string" />
 
         <field
-            formid="lastname"
+            formid="userlastname"
             label="label.input.lastname.profile"
             mandatory="true"
             max-length="50"
@@ -19,22 +30,13 @@
             type="string" />
 
         <field
-            formid="email"
-            label="label.input.email.profile"
+            formid="userphone"
+            label="label.input.phone.profile"
             mandatory="true"
             max-length="50"
             missing-error="error.message.required"
-            parse-error="error.message.parse.email.profile.form"
             range-error="error.message.50orless"
             type="string" />
 
-        <field
-            formid="phone"
-            label="label.input.phone.profile"
-            mandatory="true"
-            max-length="20"
-            missing-error="error.message.required"
-            parse-error="error.message.parse.phone.profile.form"
-            type="string" />
     </group>
 </form>

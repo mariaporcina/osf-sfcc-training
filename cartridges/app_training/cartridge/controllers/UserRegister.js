@@ -2,37 +2,33 @@
 
 var server = require('server');
 
-server.get('Show', function(req, res, next){
+server.get('Show', function(req, res, next) {
     var URLUtils = require('dw/web/URLUtils');
-    var BasketMgr = require('dw/order/BasketMgr');
+    var form = server.forms.getForm('userregister');
 
-    var currentBasket = BasketMgr.getCurrentBasket();
-
-    // var registerForm = server.forms.getForm('userRegister');
-    // registerForm.clear();
-
-    res.render('register/userRegister', {
-        // registerForm: registerForm,
-        // actionUrl: URLUtils.url('UserRegister-Registration').toString()
+    res.render('register/registerform', {
+        form: form,
+        actionUrl: URLUtils.url('UserRegister-Registration').toString()
     });
+
     return next();
 });
 
-// server.post('Registration', function(req, res, next){
-//     var registerForm = server.forms.getForm('userRegister');
+server.post('Registration', function(req, res, next) {
+    var registerForm = server.forms.getForm('userregister');
 
-//     var firstName = registerForm.profile.firstname.htmlValue
+    var userData = {
+        email: registerForm.userprofile.useremail.htmlValue,
+        firstName: registerForm.userprofile.userfirstname.htmlValue,
+        lastName: registerForm.userprofile.userlastname.htmlValue,
+        phone: registerForm.userprofile.userphone.htmlValue
+    }
 
-//     var userData = {
-//         firstName: firstName
-//     }
+    res.render('register/registration', {
+        userData: userData
+    });
 
-//     res.render('register/registration', {
-//         registerForm: registerForm,
-//         userData: userData
-//     });
-
-//     return next();
-// });
+    return next();
+});
 
 module.exports = server.exports();
