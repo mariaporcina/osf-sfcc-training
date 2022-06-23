@@ -5,7 +5,7 @@ var server = require('server');
 server.extend(module.superModule);
 
 server.append('Show', function(req, res, next) {
-    var getDiscountPercentage = require('../scripts/product/promotion');
+    var promotion = require('../scripts/product/promotion');
     var viewData = res.getViewData();
 
     var price = viewData.product.price;
@@ -14,7 +14,7 @@ server.append('Show', function(req, res, next) {
     if(price.list !== null) {
 
         var standardPrice = price.list.decimalPrice;
-        var discountPercentage = getDiscountPercentage.getDiscountPercentage(standardPrice, salePrice);
+        var discountPercentage = promotion.getDiscountPercentage(standardPrice, salePrice);
 
         viewData.percentageDiscount = discountPercentage;
     } else {

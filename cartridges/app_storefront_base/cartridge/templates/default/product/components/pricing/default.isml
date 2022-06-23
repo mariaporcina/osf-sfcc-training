@@ -33,7 +33,3 @@
         <isinclude template="/product/components/pricing/formatted" />
     </span>
 </span>
-
-<isif condition="${pdict.percentageDiscount !== 0}">
-    <isdiscountpercentage discountvalue="${pdict.percentageDiscount}" />
-</isif>
